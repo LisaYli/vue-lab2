@@ -109,9 +109,9 @@ Vue.component('scoreboard', {
 <div class="players">
 
 <player v-for="(player, index) in players"
-          :name="player.name"
-          :score="player.score"
-          :key="player.id"
+          v-bind:name="player.name"
+          v-bind:score="player.score"
+          v-bind:key="player.id"
          @onRemove="removePlayer(index)"
           @onScoreChange="(delta) => changeScore(index, delta)">
                   </player>
